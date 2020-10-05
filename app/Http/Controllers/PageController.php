@@ -9,7 +9,7 @@ class PageController extends Controller
 {
     public function index(): View
     {
-        return view('page.index', [
+        return view('web.sections.page.index', [
             'categories' => Category::all()
         ]);
     }

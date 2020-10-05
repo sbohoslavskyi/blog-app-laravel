@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('web.layout')
 
 @section('title', $post->title)
 

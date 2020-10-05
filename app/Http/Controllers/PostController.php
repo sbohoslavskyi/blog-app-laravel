@@ -9,6 +9,6 @@ class PostController extends Controller
 {
     public function show(Post $post): View
     {
-        return view('post.show', ['post' => $post]);
+        return view('web.sections.post.show', ['post' => $post]);
     }
 }

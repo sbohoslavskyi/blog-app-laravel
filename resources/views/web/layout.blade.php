@@ -9,7 +9,7 @@
     </head>
     <body>
         <header>
-            @include('navigation')
+            @include('web.layout.navigation')
         </header>
         <main>
             @yield('content')
