@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Category;
-use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
-class CategorySeeder extends Seeder
+class CategorySeeder extends BaseSeeder
 {
     /**
      * Run the database seeds.
@@ -14,8 +14,24 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        Category::factory()
-            ->times(5)
-            ->create();
+        DB::table('categories')->insert($this->createCategoryAsArray('Development'));
+        DB::table('categories')->insert($this->createCategoryAsArray('Life'));
+        DB::table('categories')->insert($this->createCategoryAsArray('Health'));
+        DB::table('categories')->insert($this->createCategoryAsArray('Design'));
+        DB::table('categories')->insert($this->createCategoryAsArray('Other'));
+    }
+
+    private function createCategoryAsArray(string $name): array
+    {
+        $faker = $this->getFaker();
+
+        return [
+            'slug'             => Str::slug($name),
+            'name'             => $name,
+            'description'      => $faker->sentences(rand(1, 2), true),
+            'image'            => $faker->imageUrl(),
+            'meta_title'       => $faker->words(rand(4, 6), true),
+            'meta_description' => $faker->sentences(rand(1, 2), true)
+        ];
     }
 }
