@@ -22,6 +22,7 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
+            'slug' => ucfirst($this->faker->slug),
             'title' => ucfirst($this->faker->words(rand(1, 3), true)),
             'short_description' => $this->faker->sentences(rand(1, 2), true),
             'body' => $this->faker->text,
