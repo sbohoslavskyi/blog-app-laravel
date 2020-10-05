@@ -8,6 +8,11 @@
         <title>@yield('title') | Blog</title>
     </head>
     <body>
-        @yield('content')
+        <header>
+            @include('navigation')
+        </header>
+        <main>
+            @yield('content')
+        </main>
     </body>
 </html>
