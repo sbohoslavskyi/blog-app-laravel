@@ -1,0 +1,24 @@
+.post {
+    &-cover {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+        background-size: cover;
+        background-blend-mode: multiply;
+        background-color: grey;
+        height: 90vh;
+
+        &-content {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+
+            h1 {
+                color: white;
+            }
+        }
+    }
+}
