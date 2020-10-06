@@ -9,9 +9,7 @@
         <title>@yield('title') | Blog</title>
     </head>
     <body>
-        {{--<header>
-            @include('web.layout.navigation')
-        </header>--}}
+        @include('web.layout.header')
         <main>
             @yield('content')
         </main>
