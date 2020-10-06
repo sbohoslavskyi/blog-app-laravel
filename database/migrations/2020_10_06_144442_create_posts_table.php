@@ -22,6 +22,7 @@ class CreatePostsTable extends Migration
             $table->string('image')->nullable();
             $table->string('tags')->nullable();
             $table->integer('reading_duration');
+            $table->boolean('is_primary');
             $table->boolean('is_published');
             $table->string('meta_description', 500);
             $table->string('meta_keywords', 300);
