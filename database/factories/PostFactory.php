@@ -27,9 +27,9 @@ class PostFactory extends Factory
         return [
             'slug'              => Str::slug($title),
             'title'             => $title,
-            'short_description' => $this->faker->realText(500),
+            'short_description' => "She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains.",
             'body'              => $this->faker->realText(5000),
-            'image'             => $this->faker->imageUrl(1920, 1080),
+            'image'             => $this->faker->imageUrl(1280, 720),
             'tags'              => 'health;earth',
             'reading_duration'  => rand(1, 20),
             'is_published'      => rand(1, 2) === 1,
