@@ -16,18 +16,20 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('slug', 100)->unique();
-            $table->string('title', 50)->unique();
-            $table->string('short_description', 300);
+            $table->string('title', 100)->unique();
+            $table->string('short_description', 500);
             $table->text('body');
             $table->string('image')->nullable();
             $table->string('tags')->nullable();
             $table->integer('reading_duration');
             $table->boolean('is_published');
-            $table->string('meta_title', 150);
-            $table->string('meta_description', 150);
+            $table->string('meta_title', 100);
+            $table->string('meta_description', 500);
             $table->dateTime('published_at');
-            $table->foreignId('category_id');
+            $table->unsignedBigInteger('category_id');
             $table->timestamps();
+
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 

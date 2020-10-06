@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Post;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class PostFactory extends Factory
 {
@@ -21,19 +22,21 @@ class PostFactory extends Factory
      */
     public function definition()
     {
+        $title = 'How Web Hosting Can Impact Page Load Speed_' . rand(1, 999);
+
         return [
-            'slug' => ucfirst($this->faker->slug),
-            'title' => ucfirst($this->faker->words(rand(1, 3), true)),
-            'short_description' => $this->faker->sentences(rand(1, 2), true),
-            'body' => $this->faker->text,
-            'image' => $this->faker->imageUrl(),
-            'tags' => 'health;earth',
-            'reading_duration' => rand(1, 20),
-            'is_published' => rand(1, 2) === 1,
-            'meta_title'       => $this->faker->words(rand(4, 6), true),
-            'meta_description' => $this->faker->sentences(rand(1, 2), true),
-            'published_at' => $this->faker->dateTime,
-            'category_id' => rand(1, 5)
+            'slug'              => Str::slug($title),
+            'title'             => $title,
+            'short_description' => $this->faker->realText(500),
+            'body'              => $this->faker->realText(5000),
+            'image'             => $this->faker->imageUrl(1920, 1080),
+            'tags'              => 'health;earth',
+            'reading_duration'  => rand(1, 20),
+            'is_published'      => rand(1, 2) === 1,
+            'meta_title'        => ucfirst($this->faker->words(rand(4, 6), true)),
+            'meta_description'  => $this->faker->realText(400),
+            'published_at'      => $this->faker->dateTime,
+            'category_id'       => rand(1, 5)
         ];
     }
 }
