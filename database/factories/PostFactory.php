@@ -33,8 +33,8 @@ class PostFactory extends Factory
             'tags'              => 'health;earth',
             'reading_duration'  => rand(1, 20),
             'is_published'      => rand(1, 2) === 1,
-            'meta_title'        => ucfirst($this->faker->words(rand(4, 6), true)),
             'meta_description'  => $this->faker->realText(400),
+            'meta_keywords'     => $this->faker->words(rand(5, 10), true),
             'published_at'      => $this->faker->dateTime,
             'category_id'       => rand(1, 5)
         ];

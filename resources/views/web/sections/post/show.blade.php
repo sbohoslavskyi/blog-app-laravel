@@ -2,6 +2,11 @@
 
 @section('title', $post->title)
 
+@section('meta')
+    <meta name="description" content="{{ $post->meta_description }}">
+    <meta name="keywords" content="{{ $post->meta_keywords }}">
+@endsection
+
 @section('content')
     <div class="post" style="background: url(https://lorempixel.com/1920/1080) no-repeat center center fixed;">
         <div class="header container">

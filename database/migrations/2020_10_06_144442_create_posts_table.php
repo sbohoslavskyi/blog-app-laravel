@@ -23,8 +23,8 @@ class CreatePostsTable extends Migration
             $table->string('tags')->nullable();
             $table->integer('reading_duration');
             $table->boolean('is_published');
-            $table->string('meta_title', 100);
             $table->string('meta_description', 500);
+            $table->string('meta_keywords', 300);
             $table->dateTime('published_at');
             $table->unsignedBigInteger('category_id');
             $table->timestamps();
