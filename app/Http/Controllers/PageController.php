@@ -9,8 +9,11 @@ class PageController extends Controller
 {
     public function index(): View
     {
-        $primaryPost = Post::where('is_primary', true)->first();
-        $posts = Post::paginate(10);
+        $primaryPost = Post::where('is_primary', true)
+            ->first();
+        $posts = Post::where('is_primary', false)
+            ->orderBy('published_at', 'desc')
+            ->paginate(10);
 
         return view('web.sections.page.index', [
             'primary_post' => $primaryPost,
