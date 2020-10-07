@@ -17,7 +17,7 @@ class PostController extends Controller
     {
         $posts = Post::where('category_id', $category->id)
             ->orderBy('published_at', 'desc')
-            ->get();
+            ->paginate(10);
 
         return view('web.sections.post.category', [
             'category' => $category,

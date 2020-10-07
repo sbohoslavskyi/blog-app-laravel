@@ -1,57 +1,3 @@
-.post {
-    &-cover {
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center center;
-        background-size: cover;
-        background-blend-mode: multiply;
-        background-color: grey;
-        height: 90vh;
-
-        &-content {
-            font-family: 'Roboto Mono', monospace;
-            width: 60%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            time {
-                font-size: 15px;
-                color: rgba(255, 255, 255, 0.5);
-            }
-
-            a {
-                font-size: 15px;
-                color: #f73859;
-                text-transform: uppercase;
-                transition: all .2s;
-                &:hover {
-                    color: darken(#f73859, 20%);
-                    text-decoration: none;
-                }
-
-                h1 {
-                    font-family: "Cormorant Garamond", serif;
-                    font-size: 50px;
-                    color: white;
-                    line-height: 1.1;
-                    padding: 5px 0 15px 0;
-                }
-            }
-        }
-    }
-
-    &-content {
-        font-family: "Roboto Mono", monospace;
-        font-size: 14px;
-        color: #666666;
-        background-color: white;
-        padding: 50px 30px;
-        margin-top: -80px;
-    }
-}
-
 .post-card {
     display: flex;
     flex-direction: column;
@@ -105,5 +51,16 @@
 
     &-horizontal {
         display: flex;
+    }
+}
+
+.post {
+    &-content {
+        font-family: "Roboto Mono", monospace;
+        font-size: 14px;
+        color: #666666;
+        background-color: white;
+        padding: 50px 30px;
+        margin-top: -80px;
     }
 }

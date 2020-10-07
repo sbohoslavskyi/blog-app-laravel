@@ -29,7 +29,7 @@ class CategorySeeder extends BaseSeeder
             'slug'             => Str::slug($name),
             'name'             => $name,
             'description'      => $faker->sentences(rand(1, 2), true),
-            'image'            => $faker->imageUrl(),
+            'image'            => $faker->imageUrl(1280, 720),
             'meta_title'       => $faker->words(rand(4, 6), true),
             'meta_description' => $faker->sentences(rand(1, 2), true)
         ];

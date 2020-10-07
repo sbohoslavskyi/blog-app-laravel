@@ -3,11 +3,12 @@
 @section('title', $category->name)
 
 @section('content')
-    <ul>
-        @foreach($posts as $post)
-            <li>
-                <a href="{{ route('post.show', ['post' => $post->slug]) }}">{{ $post->title }}</a>
-            </li>
-        @endforeach
-    </ul>
+    @include('web.sections.page.subviews.cover', [
+        'title' => $category->name,
+        'is_title_as_link' => false,
+        'image' => $category->image,
+        'caption' => 'category'
+    ])
+    @include('web.sections.post.subviews.grid', ['posts' => $posts])
+    {{ $posts->links() }}
 @endsection

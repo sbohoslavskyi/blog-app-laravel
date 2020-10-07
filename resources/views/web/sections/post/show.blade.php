@@ -8,7 +8,12 @@
 @endsection
 
 @section('content')
-    @include('web.sections.post.subviews.cover', ['post' => $post, 'has_link' => false])
+    @include('web.sections.page.subviews.cover', [
+        'title' => $post->title,
+        'is_title_as_link' => false,
+        'image' => $post->image,
+        'caption' => $post->published_at
+    ])
     <div class="container">
         <p class="post-content">{{ $post->body }}</p>
     </div>
