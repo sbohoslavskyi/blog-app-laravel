@@ -8,27 +8,8 @@
 @endsection
 
 @section('content')
-    <div class="post" style="background: url(https://lorempixel.com/1920/1080) no-repeat center center fixed;">
-        <div class="header container">
-            <h1>{{ $post->title }}</h1>
-        </div>
-        <p class="container body">
-            Laborum qui voluptates non labore est quidem. Et non ut quo aut. Voluptatem ratione optio esse deleniti ut.
-            Laborum qui voluptates non labore est quidem. Et non ut quo aut. Voluptatem ratione optio esse deleniti ut.
-            Laborum qui voluptates non labore est quidem. Et non ut quo aut. Voluptatem ratione optio esse deleniti ut.
-            Laborum qui voluptates non labore est quidem. Et non ut quo aut. Voluptatem ratione optio esse deleniti ut.
-            Laborum qui voluptates non labore est quidem. Et non ut quo aut. Voluptatem ratione optio esse deleniti ut.
-            Laborum qui voluptates non labore est quidem. Et non ut quo aut. Voluptatem ratione optio esse deleniti ut.
-            Laborum qui voluptates non labore est quidem. Et non ut quo aut. Voluptatem ratione optio esse deleniti ut.
-            Laborum qui voluptates non labore est quidem. Et non ut quo aut. Voluptatem ratione optio esse deleniti ut.
-            Laborum qui voluptates non labore est quidem. Et non ut quo aut. Voluptatem ratione optio esse deleniti ut.
-            Laborum qui voluptates non labore est quidem. Et non ut quo aut. Voluptatem ratione optio esse deleniti ut.
-            Laborum qui voluptates non labore est quidem. Et non ut quo aut. Voluptatem ratione optio esse deleniti ut.
-            Laborum qui voluptates non labore est quidem. Et non ut quo aut. Voluptatem ratione optio esse deleniti ut.
-            Laborum qui voluptates non labore est quidem. Et non ut quo aut. Voluptatem ratione optio esse deleniti ut.
-            Laborum qui voluptates non labore est quidem. Et non ut quo aut. Voluptatem ratione optio esse deleniti ut.
-            Laborum qui voluptates non labore est quidem. Et non ut quo aut. Voluptatem ratione optio esse deleniti ut.
-            Laborum qui voluptates non labore est quidem. Et non ut quo aut. Voluptatem ratione optio esse deleniti ut.
-        </p>
+    @include('web.sections.post.subviews.cover', ['post' => $post, 'has_link' => false])
+    <div class="container">
+        <p class="post-content">{{ $post->body }}</p>
     </div>
 @endsection

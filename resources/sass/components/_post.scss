@@ -41,6 +41,15 @@
             }
         }
     }
+
+    &-content {
+        font-family: "Roboto Mono", monospace;
+        font-size: 14px;
+        color: #666666;
+        background-color: white;
+        padding: 50px 30px;
+        margin-top: -80px;
+    }
 }
 
 .post-card {
