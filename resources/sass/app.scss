@@ -60,21 +60,19 @@ main {
     height: 100%;
 }
 
-.post {
-    background-size: cover;
-    height: 90vh;
+footer.footer {
+    font-family: "Roboto Mono", monospace;
+    color: grey;
+    background-color: black;
+    padding: 100px 0;
 
-    .header {
-        height: 90%;
-        display: flex;
-        align-items: center;
+    a {
+        color: #f73859;
+        transition: all .2s;
 
-        h1 {
-            color: white;
+        &:hover {
+            text-decoration: none;
+            color: darken(#f73859, 20%);
         }
-    }
-
-    .body {
-        background-color: white;
     }
 }

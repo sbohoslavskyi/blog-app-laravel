@@ -13,7 +13,9 @@
         @include('web.layout.header')
         <main>
             @yield('content')
+            @include('web.layout.footer')
         </main>
+
         <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
