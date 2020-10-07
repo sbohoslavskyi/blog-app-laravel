@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         @yield('meta')
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <title>@yield('title') | Blog</title>
+        <title>@yield('title') | Elegeia</title>
     </head>
     <body>
         @include('web.layout.header')
