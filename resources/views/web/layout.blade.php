@@ -11,7 +11,7 @@
     </head>
     <body>
         @include('web.layout.header')
-        <main>
+        <main id="content">
             @yield('content')
             @include('web.layout.footer')
         </main>
