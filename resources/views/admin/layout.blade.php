@@ -8,7 +8,7 @@
     </head>
     <body>
         @include('admin.layout.header')
-        <main>
+        <main class="container">
             @yield('content')
         </main>
         <script src="{{ asset('js/admin.js') }}"></script>
