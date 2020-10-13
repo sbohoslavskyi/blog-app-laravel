@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\Blog\PageController;
-use App\Http\Controllers\Blog\PostController;
+use App\Http\Controllers\Blog\PostController as BlogPostController;
+use App\Http\Controllers\Admin\PostController as AdminPostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,5 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PageController::class, 'index'])->name('page.index');
-Route::get('/post/{post:slug}', [PostController::class, 'show'])->name('post.show');
-Route::get('/category/{category:slug}', [PostController::class, 'category'])->name('post.category');
+Route::get('/post/{post:slug}', [BlogPostController::class, 'show'])->name('post.show');
+Route::get('/category/{category:slug}', [BlogPostController::class, 'category'])->name('post.category');
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::resource('posts', AdminPostController::class);
+});

@@ -18,3 +18,6 @@ mix.js('resources/js/app.js', 'public/js')
                 require('postcss-css-variables')()
             ]
         });
+
+mix.js('resources/admin/js/admin.js', 'public/js')
+    .sass('resources/admin/sass/admin.scss', 'public/css')
